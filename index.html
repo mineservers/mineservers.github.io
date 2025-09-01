@@ -3,9 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="我的世界武侠风格服务器列表，寻找最适合你的江湖服务器">
-    <meta name="keywords" content="我的世界,Minecraft,服务器列表,武侠服务器,江湖服务器">
-    <title>武侠江湖 - 我的世界服务器列表</title>
+    <meta name="description" content="我的世界武侠风格服务器列表，提供最新最全的Minecraft武侠服务器信息，包括服务器IP、在线人数、延迟等数据，助您快速找到理想的武侠江湖服务器">
+    <meta name="keywords" content="我的世界,Minecraft,服务器列表,武侠服务器,江湖服务器,Minecraft服务器IP,Minecraft武侠服,Minecraft多人联机">
+    <meta name="author" content="武侠江湖">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="武侠江湖 - 我的世界服务器列表">
+    <meta property="og:description" content="寻找最适合你的Minecraft武侠江湖服务器">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mineservers.github.io">
+    <meta property="og:image" content="default-logo.png">
+    <meta property="og:site_name" content="武侠江湖">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://mineservers.github.io">
+    <title>武侠江湖 - 我的世界服务器列表 | Minecraft武侠服大全</title>
     <style>
         :root {
             --primary-color: #8B4513;
@@ -227,6 +237,36 @@
             }
         }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "武侠江湖 - 我的世界服务器列表",
+      "url": "https://www.mczfw.cn",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.mczfw.cn/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "GameServer",
+            "name": "我的世界武侠服务器",
+            "description": "提供各种武侠风格的我的世界服务器列表"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -247,13 +287,16 @@
         </div>
         
         <footer>
-            <p>武侠江湖 · 我的世界服务器列表 &copy; 2023</p>
+            <p>武侠江湖 · 我的世界服务器列表 &copy; <span id="current-year">2023</span></p>
         </footer>
     </div>
     
     <div id="toast" class="toast">IP地址已复制到剪贴板</div>
     
     <script>
+        // 设置当前年份
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
         document.addEventListener('DOMContentLoaded', function() {
             fetchServerList();
         });
